@@ -1,225 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitation Card</title>
-    <link rel="icon" type="image/png" href="icon.png">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: url('https://wallpapers.com/images/hd/boho-computer-mrk2tcmew5xsj23k.jpg') no-repeat center center fixed;
-            background-size: cover;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .curtain {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, #4a4a4a, #2e2e2e);
-            z-index: 10;
-            transition: transform 1.5s ease-in-out;
-            transform: translateY(0);
-        }
-
-        .container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 20;
-        }
-
-        .envelope {
-            width: 200px;
-            height: 120px;
-            background-color: #fff;
-            border: 2px solid #d1a15c;
-            border-radius: 10px;
-            position: relative;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .ribbon {
-            width: 100%;
-            height: 30px;
-            background-color: #d1a15c;
-            color: white;
-            text-align: center;
-            line-height: 30px;
-            cursor: pointer;
-            position: absolute;
-            top: -15px;
-            left: 0;
-            border-radius: 5px;
-        }
-
-        .choice-container {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .choice-container button {
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            background-color: #0078d7;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .choice-container button:hover {
-            background-color: #005bb5;
-        }
-
-        .invitation {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .instructions {
-            margin-top: 20px;
-            text-align: center;
-            color: #333;
-        }
-
-        @media (max-width: 600px) {
-            .envelope {
-                width: 150px;
-                height: 90px;
-            }
-
-            .choice-container button {
-                font-size: 14px;
-                padding: 8px 16px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Republic Day Events</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="curtain" id="curtain"></div>
-    <div class="container" id="container">
-        <div class="welcome" id="welcome">Welcome to the Invitation Page</div>
-
-        <div class="choice-container" id="choice-container">
-            <button id="students-btn">Students</button>
-            <button id="teachers-btn">Teachers</button>
-        </div>
-
-        <div class="envelope" id="envelope">
-            <div class="ribbon" id="ribbon">Click Here</div>
-        </div>
-
-        <div class="invitation" id="students-invitation">
-            <img src="student invitation.png" alt="Students Invitation" class="invitation-img">
-        </div>
-        
-        <div class="invitation" id="teachers-invitation">
-            <img src="teacher invitation.jpg" alt="Teachers Invitation" class="invitation-img">
-        </div>
-        
-        <style>
-            .invitation-img {
-                width: 100%;
-                max-width: 500px; /* Set a maximum width for large screens */
-                height: auto;
-            }
-        
-            @media (max-width: 600px) {
-                .invitation-img {
-                    max-width: 100%; /* On small screens, make sure the image takes up 100% of the width */
-                }
-            }
-        </style>
-        
-
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click Ribbon Example</title>
-    <style>
-        .instructions {
-            font-size: 18px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="instructions" id="instructions">
-        <p>Click on the ribbon to open the invitation!</p>
+  <header class="header">
+    <h1>Republic Day Celebration</h1>
+  </header>
+  <div class="aircraft-container">
+    <div class="aircraft">
+      <div class="smoke smoke-green"></div>
+      <div class="smoke smoke-white"></div>
+      <div class="smoke smoke-orange"></div>
+      <img src="aircraft.png" alt="Aircraft">
     </div>
-
-    <script>
-        document.getElementById('instructions').addEventListener('click', function() {
-            this.style.display = 'none';
-        });
-    </script>
-
+  </div>
+  <main>
+    <section class="events">
+      <h2>Event List</h2>
+      <ul>
+        <li>Flag Hoisting Ceremony - 8:00 AM</li>
+        <li>Parade and Cultural Performance - 9:00 AM</li>
+        <li>Speech by Chief Guest - 11:00 AM</li>
+        <li>National Anthem - 12:00 PM</li>
+        <li>Lunch and Cultural Stalls - 1:00 PM</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>Jai Hind! Proud to be an Indian.</p>
+  </footer>
 </body>
 </html>
 
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const curtain = document.getElementById('curtain');
-            const envelope = document.getElementById('envelope');
-            const choiceContainer = document.getElementById('choice-container');
-            const studentsInvitation = document.getElementById('students-invitation');
-            const teachersInvitation = document.getElementById('teachers-invitation');
-            const instructions = document.getElementById('instructions');
-            const welcome = document.getElementById('welcome');
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+  color: #333;
+  text-align: center;
+}
 
-            // Open the curtain after a short delay
-            setTimeout(() => {
-                curtain.style.transform = 'translateY(-100%)';
-            }, 2000);
+.header {
+  background-color: #FF9933;
+  color: white;
+  padding: 20px;
+}
 
-            // Show welcome message briefly
-            setTimeout(() => {
-                welcome.style.display = 'none';
-                envelope.style.display = 'block';
-                instructions.style.display = 'block';
-            }, 4000);
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
 
-            // Click event for the ribbon
-            document.getElementById('ribbon').addEventListener('click', function() {
-                envelope.style.display = 'none'; // Hide envelope
-                instructions.style.display = 'none'; // Hide instructions
-                choiceContainer.style.display = 'block'; // Show choice buttons
-            });
+.aircraft-container {
+  position: relative;
+  margin: 20px 0;
+}
 
-            // Students button click event
-            document.getElementById('students-btn').addEventListener('click', function() {
-                choiceContainer.style.display = 'none';
-                studentsInvitation.style.display = 'block';
-            });
+.aircraft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
-            // Teachers button click event
-            document.getElementById('teachers-btn').addEventListener('click', function() {
-                choiceContainer.style.display = 'none';
-                teachersInvitation.style.display = 'block';
-            });
-        });
-    </script>
-</body>
-</html>
+.aircraft img {
+  width: 100px;
+  transform: rotate(-30deg);
+}
+
+.smoke {
+  position: absolute;
+  height: 20px;
+  width: 200px;
+  background: transparent;
+  opacity: 0.8;
+  border-radius: 10px;
+  animation: trail 2s infinite;
+}
+
+.smoke-green {
+  background: #138808;
+  top: 0;
+  left: -220px;
+}
+
+.smoke-white {
+  background: #FFFFFF;
+  top: 20px;
+  left: -220px;
+}
+
+.smoke-orange {
+  background: #FF9933;
+  top: 40px;
+  left: -220px;
+}
+
+@keyframes trail {
+  from {
+    opacity: 1;
+    left: -220px;
+  }
+  to {
+    opacity: 0;
+    left: 220px;
+  }
+}
+
+.events {
+  margin: 20px auto;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.events h2 {
+  color: #FF9933;
+  font-size: 2rem;
+}
+
+.events ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.events li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+footer {
+  background-color: #138808;
+  color: white;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
