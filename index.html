@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation Card</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://wallpapers.com/images/hd/boho-computer-mrk2tcmew5xsj23k.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .curtain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #4a4a4a, #2e2e2e);
+            z-index: 10;
+            transition: transform 1.5s ease-in-out;
+            transform: translateY(0);
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 20;
+        }
+
+        .envelope {
+            width: 200px;
+            height: 120px;
+            background-color: #fff;
+            border: 2px solid #d1a15c;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .ribbon {
+            width: 100%;
+            height: 30px;
+            background-color: #d1a15c;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: -15px;
+            left: 0;
+            border-radius: 5px;
+        }
+
+        .choice-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .choice-container button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background-color: #0078d7;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .choice-container button:hover {
+            background-color: #005bb5;
+        }
+
+        .invitation {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .instructions {
+            margin-top: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .envelope {
+                width: 150px;
+                height: 90px;
+            }
+
+            .choice-container button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="curtain" id="curtain"></div>
+    <div class="container" id="container">
+        <div class="welcome" id="welcome">Welcome to the Invitation Page</div>
+
+        <div class="choice-container" id="choice-container">
+            <button id="students-btn">Students</button>
+            <button id="teachers-btn">Teachers</button>
+        </div>
+
+        <div class="envelope" id="envelope">
+            <div class="ribbon" id="ribbon">Click Here</div>
+        </div>
+
+        <div class="invitation" id="students-invitation">
+            <img src="student invitation.png" alt="Students Invitation" class="invitation-img">
+        </div>
+        
+        <div class="invitation" id="teachers-invitation">
+            <img src="teacher invitation.jpg" alt="Teachers Invitation" class="invitation-img">
+        </div>
+        
+        <style>
+            .invitation-img {
+                width: 100%;
+                max-width: 500px; /* Set a maximum width for large screens */
+                height: auto;
+            }
+        
+            @media (max-width: 600px) {
+                .invitation-img {
+                    max-width: 100%; /* On small screens, make sure the image takes up 100% of the width */
+                }
+            }
+        </style>
+        
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Ribbon Example</title>
+    <style>
+        .instructions {
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="instructions" id="instructions">
+        <p>Click on the ribbon to open the invitation!</p>
+    </div>
+
+    <script>
+        document.getElementById('instructions').addEventListener('click', function() {
+            this.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const curtain = document.getElementById('curtain');
+            const envelope = document.getElementById('envelope');
+            const choiceContainer = document.getElementById('choice-container');
+            const studentsInvitation = document.getElementById('students-invitation');
+            const teachersInvitation = document.getElementById('teachers-invitation');
+            const instructions = document.getElementById('instructions');
+            const welcome = document.getElementById('welcome');
+
+            // Open the curtain after a short delay
+            setTimeout(() => {
+                curtain.style.transform = 'translateY(-100%)';
+            }, 2000);
+
+            // Show welcome message briefly
+            setTimeout(() => {
+                welcome.style.display = 'none';
+                envelope.style.display = 'block';
+                instructions.style.display = 'block';
+            }, 4000);
+
+            // Click event for the ribbon
+            document.getElementById('ribbon').addEventListener('click', function() {
+                envelope.style.display = 'none'; // Hide envelope
+                instructions.style.display = 'none'; // Hide instructions
+                choiceContainer.style.display = 'block'; // Show choice buttons
+            });
+
+            // Students button click event
+            document.getElementById('students-btn').addEventListener('click', function() {
+                choiceContainer.style.display = 'none';
+                studentsInvitation.style.display = 'block';
+            });
+
+            // Teachers button click event
+            document.getElementById('teachers-btn').addEventListener('click', function() {
+                choiceContainer.style.display = 'none';
+                teachersInvitation.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
