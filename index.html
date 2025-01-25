@@ -4,20 +4,140 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Republic Day Events</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+      color: #333;
+      text-align: center;
+    }
+
+    /* Header Section */
+    .header {
+      background-color: #FF9933;
+      color: white;
+      padding: 20px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    /* Aircraft Section */
+    .aircraft-container {
+      position: relative;
+      margin: 20px 0;
+    }
+
+    .aircraft {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .aircraft img {
+      width: 100px;
+      transform: rotate(-30deg);
+    }
+
+    .smoke {
+      position: absolute;
+      height: 20px;
+      width: 200px;
+      background: transparent;
+      opacity: 0.8;
+      border-radius: 10px;
+      animation: trail 2s infinite;
+    }
+
+    .smoke-green {
+      background: #138808;
+      top: 0;
+      left: -220px;
+    }
+
+    .smoke-white {
+      background: #FFFFFF;
+      top: 20px;
+      left: -220px;
+    }
+
+    .smoke-orange {
+      background: #FF9933;
+      top: 40px;
+      left: -220px;
+    }
+
+    @keyframes trail {
+      from {
+        opacity: 1;
+        left: -220px;
+      }
+      to {
+        opacity: 0;
+        left: 220px;
+      }
+    }
+
+    /* Events Section */
+    .events {
+      margin: 20px auto;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .events h2 {
+      color: #FF9933;
+      font-size: 2rem;
+    }
+
+    .events ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .events li {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #138808;
+      color: white;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
+  <!-- Header Section -->
   <header class="header">
     <h1>Republic Day Celebration</h1>
   </header>
+
+  <!-- Aircraft and Smoke Section -->
   <div class="aircraft-container">
     <div class="aircraft">
       <div class="smoke smoke-green"></div>
       <div class="smoke smoke-white"></div>
       <div class="smoke smoke-orange"></div>
-      <img src="aircraft.png" alt="Aircraft">
+      <img src="https://via.placeholder.com/100x50.png?text=Aircraft" alt="Aircraft">
     </div>
   </div>
+
+  <!-- Events Section -->
   <main>
     <section class="events">
       <h2>Event List</h2>
@@ -30,119 +150,10 @@
       </ul>
     </section>
   </main>
+
+  <!-- Footer Section -->
   <footer>
     <p>Jai Hind! Proud to be an Indian.</p>
   </footer>
 </body>
 </html>
-
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
-  color: #333;
-  text-align: center;
-}
-
-.header {
-  background-color: #FF9933;
-  color: white;
-  padding: 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-.aircraft-container {
-  position: relative;
-  margin: 20px 0;
-}
-
-.aircraft {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.aircraft img {
-  width: 100px;
-  transform: rotate(-30deg);
-}
-
-.smoke {
-  position: absolute;
-  height: 20px;
-  width: 200px;
-  background: transparent;
-  opacity: 0.8;
-  border-radius: 10px;
-  animation: trail 2s infinite;
-}
-
-.smoke-green {
-  background: #138808;
-  top: 0;
-  left: -220px;
-}
-
-.smoke-white {
-  background: #FFFFFF;
-  top: 20px;
-  left: -220px;
-}
-
-.smoke-orange {
-  background: #FF9933;
-  top: 40px;
-  left: -220px;
-}
-
-@keyframes trail {
-  from {
-    opacity: 1;
-    left: -220px;
-  }
-  to {
-    opacity: 0;
-    left: 220px;
-  }
-}
-
-.events {
-  margin: 20px auto;
-  max-width: 600px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.events h2 {
-  color: #FF9933;
-  font-size: 2rem;
-}
-
-.events ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.events li {
-  font-size: 1.2rem;
-  margin: 10px 0;
-  color: #333;
-}
-
-footer {
-  background-color: #138808;
-  color: white;
-  padding: 10px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
